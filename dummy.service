@@ -1,0 +1,13 @@
+[Unit]
+Description=Dummy Service
+After=network-online.target
+
+[Service]
+ExecStart=/home/fabrizzio/dummy.sh
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
